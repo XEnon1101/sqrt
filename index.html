@@ -1,44 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2 toonii ih</title>
+  <meta charset="UTF-8">
+  <title>Document</title>
 </head>
 <body>
-    <div class="2 toonii ih">
-        <h2>2 toonii ihiig oloh</h2>
+  <h2>1. Хоёр тооны их</h2>
+<input type="number" id="a1"> 
+<input type="number" id="b1">
+<button onclick="ih2()">Run</button>
+<script>
+  function ih2() {
+    let a = Number(document.getElementById("a1").value); //Zarlah
+    let b = Number(document.getElementById("b1").value);
+    let ih;
+    if (a > b) { //ih bagiig jishij shalgah
+      ih = a;
+    } else {
+      ih = b;
+    }
+    alert("Ih too: " + ih); //ih too haruulna
+  }
+</script>
 
-        <p>Ehniih:
-            <input type="number" id="num1">
-        </p>
+<h2>2. Хоёр тооны бага</h2>
+<input type="number" id="a2"> 
+<input type="number" id="b2">
+<button onclick="baga2()">Run</button>
+<script>
+  function baga2() {
+    let a = Number(document.getElementById("a2").value); // Zarlah 
+    let b = Number(document.getElementById("b2").value); // Zarlah
+    let baga; // Baga too-g hadgalah huvisagch
+    if (a < b) { // a b-dees baga esehig shalgah
+      baga = a; // a baga bol baga-g a-gaar tohiroono
+    } else {
+      baga = b; // eswel baga bol baga-g b-aar tohiroono
+    }
+    alert("Baga too: " + baga); // Baga too-g delgets deer haruulna
+  }
+</script>
 
-        <p>Hoyrdahi:
-            <input type="number" id="num2">
-        </p>
+<h2>3. Гурван тооны бага</h2>
+<input type="number" id="a3">
+<input type="number" id="b3">
+<input type="number" id="c3">
+<button onclick="baga3()">Run</button>
+<script>
+  function baga3() {
+    let a = Number(document.getElementById("a3").value); // Zarlah
+    let b = Number(document.getElementById("b3").value); 
+    let c = Number(document.getElementById("c3").value); 
+    let baga = a; // Ehleed a-g baga toogoor tohiroono
 
-        <button onclick="ihtoo()">Run</button>
+    if (b < baga) { // b a-ees baga esehig shalgah
+      baga = b; // Hergeltei bol baga-g b-aar shinechlene
+    }
+    if (c < baga) { // c baga-ges baga esehig shalgah
+      baga = c; // Hergeltei bol baga-g c-aar shinechlene
+    }
 
-        <script>
-            function ihtoo() {
-                let a = document.getElementById("num1").value;
-                let b = document.getElementById("num2").value;
+    alert("Baga too: " + baga); // Baga too-g delgets deer haruulna
+  }
+</script>
 
-                let max;
-                if (a > b) {
-                    max = a;
-                } else if (b > a) {
-                    max = b;
-                } else {
-                    alert("2 too tentsvv bn: " + a);
-                    return;
-                }
 
-                alert("Ih too ni: " + max);
-            }
-        </script>
-    </div>
 
+  <h2>4. Гурван тооны их</h2>
+<input type="number" id="a4">
+<input type="number" id="b4">
+<input type="number" id="c4">
+<button onclick="ih3()">Run</button>
+<script>
+  function ih3() {
+    let a = Number(document.getElementById("a4").value); // Zarlah
+    let b = Number(document.getElementById("b4").value); 
+    let c = Number(document.getElementById("c4").value); 
+    let ih = a; // Ehleed a-g ih toogoor tohiroono
+
+    if (b > ih) { // b a-ees ih esehig shalgah
+      ih = b; // Hergeltei bol ih-g b-aar shinechlene
+    }
+    if (c > ih) { // c ih-ges ih esehig shalgah
+      ih = c; // Hergeltei bol ih-g c-aar shinechlene
+    }
+
+    alert("Ih too: " + ih); // Ih too-g delgets deer haruulna
+  }
+</script>
+
+
+<h2>5. Гурван тооны дундах</h2>
+<input type="number" id="a5">
+<input type="number" id="b5">
+<input type="number" id="c5">
+<button onclick="dundah()">Run</button>
+<script>
+  function dundah() {
+    let a = Number(document.getElementById("a5").value); // Zarlah
+    let b = Number(document.getElementById("b5").value); 
+    let c = Number(document.getElementById("c5").value); 
+    let mid; // Dundah toog hadgalah huvisagch
+
+    // a bol dundah too eseh shalgalt
+    if ((a >= b && a <= c) || (a <= b && a >= c)) {
+      mid = a;
+    } 
+    // b bol dundah too eseh shalgalt
+    else if ((b >= a && b <= c) || (b <= a && b >= c)) {
+      mid = b;
+    } 
+    // eswel c bol dundah too
+    else {
+      mid = c;
+    }
+
+    alert("Dundah: " + mid); // Dundah too-g delgets deer haruulna
+  }
+</script>
+
+
+<h2>6. Гурван тооны дундаж</h2>
+<input type="number" id="a6">
+<input type="number" id="b6">
+<input type="number" id="c6">
+<button onclick="dundaj()">Run</button>
+<script>
+  function dundaj() {
+    let a = Number(document.getElementById("a6").value); // Zarlah
+    let b = Number(document.getElementById("b6").value);
+    let c = Number(document.getElementById("c6").value); 
+    let dundajToo = (a + b + c) / 3; // 3 too-g niilber / 3
+
+    alert("Dundaj: " + dundajToo); // Dundaж too-g delgets deer haruulna
+  }
+</script>
+
+
+ <h2>7. Эрэмбэ (2 тоо)</h2>
+<input type="number" id="a7">
+<input type="number" id="b7">
+<button onclick="erembe()">Run</button>
+<script>
+  function erembe() {
+    let a = Number(document.getElementById("a7").value); // Zarlah
+    let b = Number(document.getElementById("b7").value); 
+
+    if (a > b) { // a ih esehig shalgah
+      alert("Bagaas ih: " + b + ", " + a); // bagaas ih-rer haruulna
+    } else {
+      alert("Bagaas ih: " + a + ", " + b); // bagaas ih-rer haruulna
+    }
+  }
+</script>
+
+<h2>8. Эрэмбэ (3 тоо)</h2>
+<input type="number" id="a8">
+<input type="number" id="b8">
+<input type="number" id="c8">
+<button onclick="erembe3()">Run</button>
+<script>
+  function erembe3() {
+    let a = Number(document.getElementById("a8").value); // Zarah
+    let b = Number(document.getElementById("b8").value); 
+    let c = Number(document.getElementById("c8").value); 
+    let t; //l t-g hadgalah huvisagch
+
+    if (a > b) { t = a; a = b; b = t; } // a b-dees baga esehig shalgah
+    if (a > c) { t = a; a = c; c = t; } // a c-dees baga esehig shalgah
+    if (b > c) { t = b; b = c; c = t; } // b c-dees baga esehig shalgah
+
+    alert("Bagaas ih: " + a + ", " + b + ", " + c); // Erembe-g delgets deer haruulna
+  }
+  </script>
+
+<h2>9. Анхны тоо мөн үү?</h2>
+<input type="number" id="a9">
+<button onclick="anhnii()">Run</button>
+<script>
+  function anhnii() {
+    let n = Number(document.getElementById("a9").value); //
+
+    if (n < 2) { // 2-оос baga bol anhnii too bish
+      alert("Anhnii too bish");
+      return;
+    }
+
+    let anhniiMun = true; // Ehleed anhnii too gesen toogoor tohiroono
+
+    for (let i = 2; i <= n / 2; i++) { // 2-s n/2 hurtel shalgah
+      if (n % i === 0) { // n-iin huvaagch oldvol
+        anhniiMun = false; // Anhnii too bish
+        break;
+      }
+    }
+
+    if (anhniiMun) {
+      alert("Anhnii too mun"); // Anhnii too
+    } else {
+      alert("Anhnii too bish"); // Anhnii too bish
+    }
+  }
+</script>
+
+
+  <h2>10. Палиндром тоо мөн үү?</h2>
+<input type="number" id="a10">
+<button onclick="palindrome()">Run</button>
+<script>
+  function palindrome() {
+    let n = Number(document.getElementById("a10").value); 
+    let a = n;    // Original too-g hadgalah
+    let rev = 0;  // Urvuu too-g hadgalah
+
+    while (n > 0) { // n-g bituu oloh hurtel
+      let d = n % 10;       // Suuliin oron
+      rev = rev * 10 + d;   // Urvul too-g uusgeh
+      n = (n - d) / 10;     // Oron-g tseverleh
+    }
+
+    if (a == rev) {
+      alert("Palindrom mun"); // Palindrom too
+    } else {
+      alert("Palindrom bish"); // Palindrom bish
+    }
+  }
+</script>
+
+
+<h2>11. Палиндром анхны тоонууд</h2>
+<input type="number" id="a11">
+<input type="number" id="b11">
+<button onclick="palindPrime()">Run</button>
+<script>
+  function isPrime(n) { // Anhnii too shalgah function
+    if (n < 2) return false;
+    for (let i = 2; i <= n / 2; i++) {
+      if (n % i == 0) return false;
+    }
+    return true;
+  }
+
+  function isPalin(n) { // Palindrom too shalgah function
+    let a = n;
+    let rev = 0;
+    while (n > 0) {
+      let d = n % 10;
+      rev = rev * 10 + d;
+      n = (n - d) / 10;
+    }
+    return a == rev;
+  }
+
+  function palindPrime() {
+    let a = Number(document.getElementById("a11").value); 
+    let b = Number(document.getElementById("b11").value);
+    let result = ""; // Ur dun-g hadgalah
+
+    for (let i = a; i <= b; i++) { // a-s b hurtel shalgah
+      if (isPrime(i) && isPalin(i)) { // Anhnii && palindrom
+        result = result + i + " "; // Ur dun-g nemeh
+      }
+    }
+
+    if (result == "") {
+      alert("Palindrom anhnii too bhgu"); // Ur dun oldsongui
+    } else {
+      alert("Palindrom anhnii toonuud: " + result); // Ur dun-g haruulna
+    }
+  }
+</script>
 
 </body>
 </html>
